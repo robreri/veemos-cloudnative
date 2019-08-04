@@ -4,3 +4,10 @@
 * git commit -m "initial commit"
 * git remote add origin https://github.com/robreri/veemos-cloudnative.git
 * git push origin master
+
+# VEEMOS client set-up
+
+'''
+	$ node -v
+		v10.16.0
+'''
