@@ -1,4 +1,4 @@
-#GitHub repo set-up
+# GitHub repo set-up
 create repo veemos-cloudnative at github
 git init
 git commit -m "initial commit"
