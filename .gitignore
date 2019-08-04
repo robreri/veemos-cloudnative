@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+veemos-client-react/node_modules
+veemos-client-react/.pnp
+veemos-client-react/.pnp.js
+
+# testing
+veemos-client-react/coverage
+
+# production
+veemos-client-react/build
+
+# misc
+veemos-client-react/.DS_Store
+veemos-client-react/.env.local
+veemos-client-react/.env.development.local
+veemos-client-react/.env.test.local
+veemos-client-react/.env.production.local
+
+veemos-client-react/npm-debug.log*
+veemos-client-react/yarn-debug.log*
+veemos-client-react/yarn-error.log*
