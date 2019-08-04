@@ -109,3 +109,8 @@ service "client-node-port" deleted
 $ kubectl delete pod client-pod
 pod "client-pod" deleted
 ```
+
+* stop minikube
+```
+minikube stop
+````
