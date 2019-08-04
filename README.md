@@ -7,7 +7,7 @@
 
 # VEEMOS client set-up
 
-'''
+```
 	$ node -v
 		v10.16.0
-'''
+```
