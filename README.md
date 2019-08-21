@@ -5,6 +5,12 @@
 * git remote add origin https://github.com/robreri/veemos-cloudnative.git
 * git push origin master
 
+# Git Commands
+* git add .
+* git commit -m " "
+* git push origin master
+
+
 # VEEMOS client set-up
 
 ```
