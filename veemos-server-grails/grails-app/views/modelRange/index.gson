@@ -1,0 +1,8 @@
+import veemos.server.grails.ModelRange
+
+model {
+	Iterable<ModelRange> modelRangeList
+}
+
+json tmpl.modelRange(modelRangeList ?: [])
+

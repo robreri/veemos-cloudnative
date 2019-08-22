@@ -1,0 +1,8 @@
+import veemos.server.grails.Event
+
+model {
+	Iterable<Event> eventList
+}
+
+json tmpl.event(eventList ?: [])
+

@@ -1,0 +1,7 @@
+import veemos.server.grails.Event
+
+model {
+	Event event
+}
+
+json g.render(event, [resolveTemplate: false])

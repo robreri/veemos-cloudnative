@@ -1,0 +1,8 @@
+import veemos.server.grails.ConversionAction
+
+model {
+	Iterable<ConversionAction> conversionActionList
+}
+
+json tmpl.conversionAction(conversionActionList ?: [])
+

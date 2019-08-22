@@ -1,0 +1,8 @@
+import veemos.server.grails.Vehicle
+
+model {
+	Iterable<Vehicle> vehicleList
+}
+
+json tmpl.vehicle(vehicleList ?: [])
+

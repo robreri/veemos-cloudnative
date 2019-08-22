@@ -1,0 +1,7 @@
+import veemos.server.grails.Division
+
+model {
+	Division division
+}
+
+json g.render(division, [resolveTemplate: false])

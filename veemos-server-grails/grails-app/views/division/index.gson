@@ -1,0 +1,8 @@
+import veemos.server.grails.Division
+
+model {
+	Iterable<Division> divisionList
+}
+
+json tmpl.division(divisionList ?: [])
+

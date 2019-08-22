@@ -1,0 +1,7 @@
+import veemos.server.grails.ModelRange
+
+model {
+	ModelRange modelRange
+}
+
+json g.render(modelRange, [resolveTemplate: false])

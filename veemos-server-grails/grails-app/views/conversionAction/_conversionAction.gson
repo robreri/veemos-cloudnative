@@ -1,0 +1,7 @@
+import veemos.server.grails.ConversionAction
+
+model {
+	ConversionAction conversionAction
+}
+
+json g.render(conversionAction, [resolveTemplate: false])

@@ -1,0 +1,7 @@
+import veemos.server.grails.Vehicle
+
+model {
+	Vehicle vehicle
+}
+
+json tmpl.vehicle(vehicle)
