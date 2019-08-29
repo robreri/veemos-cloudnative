@@ -1,7 +1,9 @@
 sudo: required
 services:
   - docker
-
+env:
+  global:
+    - SHA=$(git rev-parse HEAD)
 before_install:
   - docker build -t robreri/veemos-client-react-test -f ./veemos-client-react/Dockerfile.dev ./veemos-client-react
 
@@ -9,10 +11,12 @@ script:
   - docker run -e CI=true robreri/veemos-client-react-test npm test -- --coverage
 
 after_success:
-  - docker build -t robreri/veemos-client-react ./veemos-client-react
-  - docker build -t robreri/veemos-server-grails ./veemos-server-grails
-  # Log in to the docker CLI
+  - docker build -t robreri/veemos-client-react:latest -t robreri/veemos-client-react:$SHA -f ./veemos-client-react/Dockerfile ./veemos-client-react
+  - docker build -t robreri/veemos-server-grails:latest -t robreri/veemos-server-grails:$SHA -f ./veemos-server-grails/Dockerfile ./veemos-server-grails
+# Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push robreri/veemos-client-react
-  - docker push robreri/veemos-server-grails
+  - docker push robreri/veemos-client-react:latest
+  - docker push robreri/veemos-server-grails:latest
+  - docker push robreri/veemos-client-react:$SHA
+  - docker push robreri/veemos-server-grails:$SHA
